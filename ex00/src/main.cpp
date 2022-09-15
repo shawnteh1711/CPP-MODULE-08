@@ -6,7 +6,7 @@
 /*   By: steh <steh@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 09:09:56 by steh              #+#    #+#             */
-/*   Updated: 2022/09/14 11:12:03 by steh             ###   ########.fr       */
+/*   Updated: 2022/09/15 08:12:03 by steh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,15 @@ void test1(void);
 void test2(void);
 void test3(void);
 
+// Container is an object that stores a collection of objects
+// of specific type.
+
+
+// iterators ia an object that points to an element inside container
+// iterators move through contents of container (like pointer)
+// it allow us to easily and dynamically add and
+// remove elements from container. It is also more convenient
+// as we do not need to know about the size of container.
 int main(void)
 {
 	test1();
