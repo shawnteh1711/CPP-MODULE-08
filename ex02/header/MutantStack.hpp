@@ -6,7 +6,7 @@
 /*   By: steh <steh@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 14:49:13 by steh              #+#    #+#             */
-/*   Updated: 2022/09/14 16:45:21 by steh             ###   ########.fr       */
+/*   Updated: 2022/09/27 13:27:39 by steh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,14 @@ class MutantStack : public stack<T>
 		~MutantStack(void);
 
 		typedef typename stack<T>::container_type::iterator iterator;
+		typedef typename stack<T>::container_type::const_iterator const_iterator;
 
 		iterator	begin(void)
+		{
+			return (stack<T>::c.begin());
+		}
+
+		const_iterator	begin(void) const
 		{
 			return (stack<T>::c.begin());
 		}
@@ -42,6 +48,12 @@ class MutantStack : public stack<T>
 		{
 			return (stack<T>::c.end());
 		}
+
+		const_iterator	end(void) const
+		{
+			return (stack<T>::c.end());
+		}
+
 };
 
 #endif

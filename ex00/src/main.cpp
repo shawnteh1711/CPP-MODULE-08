@@ -6,7 +6,7 @@
 /*   By: steh <steh@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 09:09:56 by steh              #+#    #+#             */
-/*   Updated: 2022/09/15 08:12:03 by steh             ###   ########.fr       */
+/*   Updated: 2022/09/28 17:15:03 by steh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,8 @@ void test3(void);
 // as we do not need to know about the size of container.
 int main(void)
 {
-	test1();
-	test2();
+	// test1();
+	// test2();
 	test3();
 	return 0;
 }
@@ -49,7 +49,8 @@ void test1(void)
 		cont.push_back(i);
 
 	it = easyfind(cont, 1);
-	cout << *it << endl;
+	it = easyfind(cont, 4);
+	// cout << *it << endl;
 	try
 	{
 		it = easyfind(cont, -1);
@@ -69,7 +70,7 @@ void test2(void)
 		cont.push_back(i);
 
 	it = easyfind(cont, 1);
-	cout << *it << endl;
+	// cout << *it << endl;
 	try
 	{
 		it = easyfind(cont, -1);
@@ -89,7 +90,7 @@ void test3(void)
 		cont[i] = i;
 
 	it = easyfind(cont, 1);
-	cout << *it << endl;
+	// cout << *it << endl;
 	try
 	{
 		it = easyfind(cont, -1);
