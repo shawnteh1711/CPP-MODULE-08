@@ -6,7 +6,7 @@
 /*   By: steh <steh@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 12:23:51 by steh              #+#    #+#             */
-/*   Updated: 2022/09/14 13:51:15 by steh             ###   ########.fr       */
+/*   Updated: 2022/09/29 18:40:53 by steh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 #include <iostream>
 #include <vector>
+#include <algorithm>
 #include <iterator>
 
 using std::vector;
@@ -34,8 +35,10 @@ class Span
 		~Span(void);
 
 		void			addNumber(int n);
-		int				shortestSpan(void) const;
-		int				longestSpan(void) const;
+		void			addNumber( std::vector<int>::iterator it, std::vector<int>::iterator ite);
+		long			shortestSpan(void) const;
+		long			longestSpan(void) const;
+		void			printSpan(void) const;
 		unsigned int	getSizeN(void) const;
 		vector<int>		getVector(void) const;
 };

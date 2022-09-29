@@ -6,7 +6,7 @@
 /*   By: steh <steh@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 14:49:13 by steh              #+#    #+#             */
-/*   Updated: 2022/09/27 13:27:39 by steh             ###   ########.fr       */
+/*   Updated: 2022/09/28 23:24:06 by steh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,8 @@ class MutantStack : public stack<T>
 
 		typedef typename stack<T>::container_type::iterator iterator;
 		typedef typename stack<T>::container_type::const_iterator const_iterator;
+		typedef typename stack<T>::container_type::reverse_iterator reverse_iterator;
+		typedef typename stack<T>::container_type::const_reverse_iterator const_reverse_iterator;
 
 		iterator	begin(void)
 		{
@@ -41,7 +43,7 @@ class MutantStack : public stack<T>
 
 		const_iterator	begin(void) const
 		{
-			return (stack<T>::c.begin());
+			return (stack<T>::c.cbegin());
 		}
 
 		iterator	end(void)
@@ -51,7 +53,27 @@ class MutantStack : public stack<T>
 
 		const_iterator	end(void) const
 		{
-			return (stack<T>::c.end());
+			return (stack<T>::c.cend());
+		}
+
+		reverse_iterator	rbegin(void)
+		{
+			return (stack<T>::c.rbegin());
+		}
+
+		const_reverse_iterator	rbegin(void) const
+		{
+			return (stack<T>::c.crbegin());
+		}
+
+		reverse_iterator	rend(void)
+		{
+			return (stack<T>::c.rend());
+		}
+
+		const_reverse_iterator	rend(void) const
+		{
+			return (stack<T>::c.crend());
 		}
 
 };
